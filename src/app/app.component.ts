@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
-import { HttpErrorResponse } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
@@ -18,14 +18,11 @@ export class AppComponent {
   ngOnInit() {
     this.getEmployees();
   }
-  
+
   public getEmployees(): void {
     this.employeeService.getEmployees().subscribe(
       (response: Employee[]) => {
         this.employees = response;
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
       }
     );
   }
