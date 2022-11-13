@@ -101,11 +101,11 @@
             <label for="imageUrl">Photo</label>
             <input type="text" ngModel name="imageUrl" id="imageUrl" class="form-control" placeholder="http://le-lien-de-votre-image" required>
           </div>
+          <div class="modal-footer">
+            <button type="button" id="addEmployeeForm" class="btn btn-secondary" data-bs-dismiss="modal">fermer</button>
+            <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Enregistrer</button>
+          </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="addEmployeeForm" class="btn btn-secondary" data-bs-dismiss="modal">fermer</button>
-        <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Enregistrer</button>
       </div>
     </div>
   </div>
