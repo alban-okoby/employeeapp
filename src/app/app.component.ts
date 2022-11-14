@@ -66,11 +66,14 @@ export class AppComponent {
 
     if (mode === 'add')
       button.setAttribute('data-bs-target', '#addModal');
-    if (mode === 'edit')
+    if (mode === 'edit') {
+      this.editEmployee = employee;
       button.setAttribute('data-target', '#editModal');
-    if (mode === 'delete')
+    }
+    if (mode === 'delete') {
+      this.deleteEmployee = employee;
       button.setAttribute('data-bs-target', '#deleteModal');
-
+    }
     mainContainer!.appendChild(button);
     button.click();
   }
